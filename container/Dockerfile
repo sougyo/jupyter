@@ -9,5 +9,7 @@ RUN julia -e 'using Pkg; Pkg.add([\
  "SparseArrays",         \
  "Tensors",              \
  "TensorOperations",     \
- "Symbolics"             \
+ "Symbolics",            \
+ "Grassmann",            \
+ "Makie"                 \
 ])'
