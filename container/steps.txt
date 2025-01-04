@@ -1,2 +1,2 @@
-docker build . -t localhost:32000/jupyter-mod:latest
+docker build - -t localhost:32000/jupyter-mod:latest < Dockerfile
 docker push localhost:32000/jupyter-mod:latest
