@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jupyter
+  labels:
+    app: jupyter
+spec:
+  selector:
+    matchLabels:
+      app: jupyter
+  template:
+    metadata:
+      labels:
+        app: jupyter
+    spec:
+      containers:
+      - name: jupyter
+        image: localhost:32000/jupyter-mod:latest
+        ports:
+        - containerPort: 8888
+        command: ["start-notebook.sh", "--ip=0.0.0.0", "--port=8888"]
+        volumeMounts:
+        - name: data-volume
+          mountPath: /home/jovyan/work
+      volumes:
+      - name: data-volume
+        hostPath:
+          path: /vol/jupyter
