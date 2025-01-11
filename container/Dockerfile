@@ -11,5 +11,6 @@ RUN julia -e 'using Pkg; Pkg.add([\
  "TensorOperations",     \
  "Symbolics",            \
  "Grassmann",            \
- "Makie"                 \
+ "Makie",                \
+ "CairoMakie"            \
 ])'
