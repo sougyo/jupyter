@@ -5,6 +5,7 @@ RUN julia -e 'using Pkg; Pkg.add([\
  "DifferentialEquations",\
  "SymPy",                \
  "Plots",                \
+ "Latexify",             \
  "LinearAlgebra",        \
  "SparseArrays",         \
  "Tensors",              \
