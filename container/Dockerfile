@@ -21,4 +21,6 @@ RUN julia -e 'using Pkg; Pkg.add([\
  "OrdinaryDiffEq",        \
  "ExponentialUtilities",  \
  "CairoMakie"             \
-])'
+]); Pkg.precompile()'
+
+ENV JULIA_PKG_PRECOMPILE_AUTO=0
