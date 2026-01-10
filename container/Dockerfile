@@ -1,5 +1,6 @@
 FROM jupyter/datascience-notebook
 
+ENV JULIA_CPU_TARGET="generic;sandybridge,-xsaveopt,clone_all;haswell,-rdrnd,base(1)"
 RUN julia -e 'using Pkg; Pkg.add([\
  "QuadGK",                \
  "DifferentialEquations", \
